@@ -7,7 +7,7 @@ use crate::{
 };
 
 static DEFAULT_PACKAGES: &str =
-    "bash ca-certificates apt net-tools iputils-ping procps vim bpftool";
+    "bash ca-certificates apt net-tools iputils-ping procps vim bpftool gdb strace valgrind python3-pip";
 
 fn extract_file(filename: &str, target: &str) -> Result<()> {
     if let Some(asset) = PROJECT_DIR.get_file(filename) {

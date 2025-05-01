@@ -2,7 +2,9 @@ use include_dir::{include_dir, Dir};
 
 pub(crate) const DEFAULT_DEBIAN_DISTRO: &str = "bullseye";
 
-pub(crate) const DEFAULT_DEBIAN_REPO: &str = "http://ftp.us.debian.org/debian/";
+// http://mirrors.aliyun.com/debian/
+// https://mirrors.tuna.tsinghua.edu.cn/debian/
+pub(crate) const DEFAULT_DEBIAN_REPO: &str = "http://mirrors.aliyun.com/debian/";
 
 pub(crate) const DEFAULT_PREBUILT_ROOTFS_REPO: &str = "https://github.com/tiann/eadb/";
 
