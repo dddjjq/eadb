@@ -47,9 +47,8 @@ You will enter the eadb environment and get a shell by this command, you can use
 
 ### Build the environment by yourself
 
-tips:
-You must convert the line break character to "LF"
-use dos2unix or 
+**Tips:**
+**You must convert the line break character to "LF" (use dos2unix)**
 
 Only Ubuntu / Debian is supported to build the system image running on Android, you can use docker or podman on macOS and WSL on Windows.
 
