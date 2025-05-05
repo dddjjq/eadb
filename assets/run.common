@@ -22,6 +22,11 @@ do_mounts()
 		if [ ! -d debian/d ]; then ln -s /sys/kernel/debug debian/d; fi
 	fi
 
+	if [ -d /data/ ]; then
+		mkdir -p debian/data/
+		mount --bind /data debian/data/
+	fi
+
 	# don't mount /data to avoid data loss
 	if [ -d /system/ ]; then
 		mkdir -p debian/system/
