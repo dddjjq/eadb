@@ -47,6 +47,10 @@ You will enter the eadb environment and get a shell by this command, you can use
 
 ### Build the environment by yourself
 
+tips:
+You must convert the line break character to "LF"
+use dos2unix or 
+
 Only Ubuntu / Debian is supported to build the system image running on Android, you can use docker or podman on macOS and WSL on Windows.
 
 Install `qemu-user-static` and `debootstrap` first:
@@ -58,7 +62,16 @@ sudo apt update && sudo apt install qemu-user-static debootstrap
 And then build the eadb (root is required):
 
 ```sh
-sudo eadb build
+sudo update-binfmts --enable qemu-aarch64
+//mini
+sudo eadb build 
+or
+//full
+sudo eadb build --bcc
+//change mirror
+sudo eadb build --bcc --mirror https://xxx
+//set tmpdir 
+sudo eadb build --bcc --tempdir /home/xxx
 ```
 
 After the build, you will get a `debianfs-full(mini).tar.gz` in your working directory. you can use this image as your environment:

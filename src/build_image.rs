@@ -131,7 +131,7 @@ pub fn build(
     let output_file = format!("debianfs-{}-{}.tar.gz", arch, variant);
 
     // build tar
-    let cmd = format!("tar -zcf --overwrite {output_file} -C {working_path} debian");
+    let cmd = format!("tar -zcf {output_file} -C {working_path} debian");
     exec::check_call(cmd)?;
 
     Ok(())
